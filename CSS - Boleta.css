@@ -200,6 +200,10 @@ td.preciototal {
     font-size: 14px;
 }
 
+td.item-name {
+    font-size: 13px;
+}
+
 .datosparaenvio {
     margin-top: 50px;
     font-size: 25px;
