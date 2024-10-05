@@ -352,7 +352,7 @@ a:hover {
 /* Imagen del producto */
 .item-image {
     width: 120px;
-    height: 145px;
+    height: 172px;
     object-fit: cover;
     border-radius: 8px;
     margin-left: 15px;
