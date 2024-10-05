@@ -158,7 +158,7 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
             <td><img class = "img-producto" src="${item.image}" alt="${item.name}"></td>
-            <td>${item.name}</td>
+            <td class="item-name">${item.name}</td>
             <td>${item.quantity}</td>
             <td>S/ ${parseFloat(item.price).toFixed(2)}</td>
             <td class="preciototal">S/ ${parseFloat(item.total).toFixed(2)}</td>
