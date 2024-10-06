@@ -328,9 +328,10 @@ a:hover {
 }
 
 .item-name {
-    font-size: 1.2rem;
+    font-size: 17px;
     margin: 0;
     font-weight: 440;
+    width: 238px;
 }
 
 .item-price {
