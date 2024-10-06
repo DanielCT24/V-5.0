@@ -14,13 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchBar');
     const productCards = document.querySelectorAll('.card__trust');
@@ -65,8 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-
 // Configuración de la paginación
 const productsPerPage = 9;
 let currentPage = 1;
@@ -93,34 +84,38 @@ function paginateProducts() {
             product.style.display = (index >= start && index < end) ? 'block' : 'none';
         });
     }
+// Crear los botones de paginación
+function createPagination() {
+    const paginationContainer = document.getElementById('pagination-container');
+    paginationContainer.innerHTML = '';
 
-    // Crear los botones de paginación
-    function createPagination() {
-        const paginationContainer = document.getElementById('pagination-container');
-        paginationContainer.innerHTML = '';
-
-        for (let i = 1; i <= totalPages; i++) {
-            const button = document.createElement('button');
-            button.textContent = i;
-            button.classList.add('pagination-btn');
-            if (i === currentPage) {
-                button.classList.add('active');
-            }
-
-            button.addEventListener('click', () => {
-                currentPage = i;
-                displayProducts(currentPage);
-                document.querySelectorAll('.pagination-btn').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-            });
-
-            paginationContainer.appendChild(button);
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement('button');
+        button.textContent = i;
+        button.classList.add('pagination-btn');
+        if (i === currentPage) {
+            button.classList.add('active');
         }
-    }
 
-    // Mostrar la primera página y generar la paginación
-    displayProducts(currentPage);
-    createPagination();
+        button.addEventListener('click', () => {
+            currentPage = i;
+            displayProducts(currentPage);
+            // Aquí añadimos el scroll al principio de la página
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Actualizar la clase activa
+            document.querySelectorAll('.pagination-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+
+        paginationContainer.appendChild(button);
+    }
+}
+
+// Mostrar la primera página y generar la paginación
+displayProducts(currentPage);
+createPagination();
+
 }
 
 // Esperar a que el DOM esté listo antes de ejecutar la función
