@@ -17,14 +17,11 @@
     <link rel="manifest" href="site.webmanifest">
     <script src="https://kit.fontawesome.com/21bc0e3a65.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-
 </head>
 
 <style>
-    /* -------------------------------------------ANIMCACIÓN HEADER----------------------------------------------- */
 
+    /* -------------------------------------------ANIMCACIÓN HEADER----------------------------------------------- */
     .header-nav a {
         position: relative;
         text-decoration: none;
@@ -55,18 +52,6 @@
 
 <body>
 
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Header - menu -->
     <header>
         <div class="menu ">
@@ -74,18 +59,10 @@
             <input type="checkbox" id="menu">
             <label for="menu">
                 <img src="/HEADER Y BODY/menu.webp" loading="lazy" class="menu-icono">
-
-
-
-
                 <a href="/Usuario" class="btn__login">
                     <img src="/Imagen-Login.webp" alt="Login" loading="lazy" class="login-icon">
                     <h3 class="userDNI" id="userDNI">Nombre del Usuario</h3>
                 </a>
-
-
-
-
             </label>
 
             <nav class="navbar fade-in">
@@ -101,47 +78,25 @@
                     </div>
                 </div>
 
-
-
-
-                <!-------------------------------------------------- PC --------------->
+                <!------------------------------------- PC ------------------------------------->
 
                 <a href="/"><img class="logo-2 " src="/LOGO.webp" alt=""></a>
-
-
-
 
                 <a href="/Usuario" class="btn__login" id="loginButton">
                     <img src="/Imagen-Login.webp" alt="Login" loading="lazy" class="login-icon-header">
                     <h3 class="userNamesPC" id="userNames">Nombre del Usuario</h3>
 
                 </a>
-
-
-
-
             </nav>
-
-
         </div>
     </header>
 
-
-
-
-
     <main>
-
-
         <div class="container">
             <!-- Formulario de Información de Envío -->
             <div class="shipping-info">
                 <h2>Información de Envío</h2>
                 <form id="paymentForm">
-
-
-
-
                     <div class="section">
                         <label> DIRECCIÓN</label>
                         <div class="search-container">
@@ -154,7 +109,6 @@
                             </div>
                         </div>
 
-
                         <input type="text" id="street" placeholder="Calle y Número (*Obligatorio)" required>
                         <input type="text" id="apartment" placeholder="Dpto, Oficina, etc. (*Opcional)">
                         <input type="text" id="postal-code" placeholder="Código Postal (*Opcional)">
@@ -163,7 +117,6 @@
 
                     <div class="delivery-container">
                         <label for="delivery">SELECCIONE UNA OPCIÓN DE ENVÍO DELIVERY</label>
-
                         <div class="delivery-option" required>
                             <label>
                                 <input type="radio" name="delivery" value="marvisur" required>
@@ -172,7 +125,6 @@
                             <span class="delivery-date">Tu pedido llegará entre el <span id="start-date1"></span> y
                                 <span id="end-date1"></span></span>
                         </div>
-
                         <div class="delivery-option" required>
                             <label>
                                 <input type="radio" name="delivery" value="olvacourier" required>
@@ -181,7 +133,6 @@
                             <span class="delivery-date">Tu pedido llegará entre el <span id="start-date2"></span> y
                                 <span id="end-date2"></span></span>
                         </div>
-
                         <div class="delivery-option" required>
                             <label>
                                 <input type="radio" name="delivery" value="shalom" required>
@@ -191,10 +142,6 @@
                                 <span id="end-date3"></span></span>
                         </div>
                     </div>
-
-
-
-
 
                     <!-- Información de Contacto -->
                     <div class="section">
@@ -212,24 +159,12 @@
                         <input type="text" id="dni" placeholder="DNI" maxlength="8" required>
                     </div>
 
-
-
-
                     <!-- Cupón de Descuento -->
                     <div class="section">
                         <label for="coupon">CUPÓN DE DESCUENTO</label>
                         <input type="text" id="coupon" placeholder="Ingresa tu cupón">
                         <button type="button" id="validateCoupon">Validar Descuento</button>
                     </div>
-
-
-
-
-
-
-
-
-
 
                     <!-- Método de Pago -->
                     <div class="section">
@@ -241,18 +176,6 @@
                             </label>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
                     <div id="yape-popup" class="popup">
                         <div class="popup-content">
@@ -274,7 +197,6 @@
                                 <input type="text" id="confirma-operacion" class="input-field" oninput="validateForm()">
                             </div>
                             <p id="error-message" class="error-message"></p>
-
                             <div class="form-group">
                                 <label for="fecha-hora">Fecha y hora de la operación:</label>
                                 <input type="datetime-local" id="fecha-hora" class="input-field"
@@ -286,13 +208,9 @@
                             <input type="file" id="comprobante" class="input-file" onchange="handleFileUpload()">
                             <label for="comprobante" class="upload-btn" id="upload-label">📎 Adjuntar
                                 comprobante</label>
-
                             <button id="finalize-btn" class="finalize-btn" disabled
                                 onclick="finalizePurchase('¡Tu compra ha sido exitosa!')">Finalizar</button>
-
                         </div>
-
-
 
                         <!-- Modal -->
                         <div id="customModal" class="custom-modal">
@@ -313,18 +231,7 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
-
                     </div>
-
-
-
-
-
 
                     <!-- Términos y Condiciones -->
                     <div class="section">
@@ -346,108 +253,88 @@
                             <p class="terminos">Al utilizar este sitio web, aceptas cumplir con los siguientes términos
                                 y condiciones. Si no estás de acuerdo con alguna parte de estos términos, te
                                 recomendamos que no utilices este sitio.</p>
-
                             <h2 class="terminos">1. Aceptación de los Términos</h2>
                             <p class="terminos">Estos términos y condiciones rigen el uso de este sitio web. Al acceder
                                 o utilizar el sitio, aceptas estar sujeto a estos términos. Si no aceptas estos
                                 términos, no debes usar el sitio.</p>
-
                             <h2 class="terminos">2. Cambios en los Términos</h2>
                             <p class="terminos">Nos reservamos el derecho de modificar estos términos en cualquier
                                 momento. Cualquier cambio será efectivo inmediatamente después de su publicación en el
                                 sitio. Te recomendamos que revises estos términos periódicamente para estar al tanto de
                                 cualquier modificación.</p>
-
                             <h2 class="terminos">3. Uso del Sitio</h2>
                             <p class="terminos">El usuario se compromete a usar el sitio de acuerdo con las leyes
                                 aplicables y no utilizar el sitio para fines ilegales o prohibidos. Está prohibido el
                                 uso de técnicas de "scraping" o cualquier otra forma de recolección automatizada de
                                 datos.</p>
-
                             <h2 class="terminos">4. Propiedad Intelectual</h2>
                             <p class="terminos">Todo el contenido del sitio, incluidos, entre otros, textos, gráficos,
                                 logotipos y software, es propiedad de la empresa o sus licenciantes y está protegido por
                                 las leyes de propiedad intelectual. Queda prohibida la reproducción o distribución del
                                 contenido sin autorización.</p>
-
                             <h2 class="terminos">5. Limitación de Responsabilidad</h2>
                             <p class="terminos">La empresa no será responsable de ningún daño directo, indirecto,
                                 incidental o consecuente que resulte del uso o la imposibilidad de uso del sitio. Esto
                                 incluye, pero no se limita a, daños por pérdida de beneficios, interrupción del negocio
                                 o pérdida de información.</p>
-
                             <h2 class="terminos">6. Enlaces a Terceros</h2>
                             <p class="terminos">Este sitio puede contener enlaces a sitios web de terceros. No somos
                                 responsables del contenido de estos sitios ni de sus políticas de privacidad. Te
                                 recomendamos que leas las políticas de privacidad de cada sitio que visites.</p>
-
                             <h2 class="terminos">7. Legislación Aplicable</h2>
                             <p class="terminos">Estos términos se regirán e interpretarán de acuerdo con las leyes del
                                 país donde se encuentra la empresa, sin dar efecto a sus principios sobre conflictos de
                                 leyes.</p>
-
                             <h2 class="terminos">8. Contacto</h2>
                             <p class="terminos">Si tienes preguntas sobre estos términos, puedes ponerte en contacto con
                                 nosotros a través del correo electrónico: soporte@ejemplo.com.</p>
-
                             <h2 class="terminos">9. Aceptación de los Términos</h2>
                             <p class="terminos">El uso continuado de este sitio tras la publicación de cambios en los
                                 términos implica la aceptación de dichos cambios.</p>
-
                             <h2 class="terminos">10. Terminación</h2>
                             <p class="terminos">Nos reservamos el derecho a cancelar o restringir el acceso al sitio en
                                 cualquier momento y por cualquier razón, sin previo aviso.</p>
-
                             <h2 class="terminos">11. Limitaciones de Uso</h2>
                             <p class="terminos">El usuario se compromete a no realizar actividades que puedan dañar,
                                 desactivar, sobrecargar o perjudicar el sitio, o interferir con el uso del sitio por
                                 parte de otros usuarios. Se prohíbe el uso del sitio para transmitir cualquier contenido
                                 ilegal, dañino, amenazante o acosador.</p>
-
                             <h2 class="terminos">12. Indemnización</h2>
                             <p class="terminos">El usuario acepta indemnizar y mantener indemne a la empresa, sus
                                 afiliados, empleados y agentes de cualquier reclamación, demanda o pérdida, incluyendo
                                 honorarios razonables de abogados, que surja del uso del sitio por parte del usuario o
                                 de su violación de estos términos.</p>
-
                             <h2 class="terminos">13. Responsabilidad de Contenido</h2>
                             <p class="terminos">La empresa no asume ninguna responsabilidad por el contenido generado
                                 por los usuarios o por el contenido de terceros que pueda aparecer en el sitio. Los
                                 usuarios son responsables de sus propias publicaciones y de cualquier daño que pueda
                                 resultar de ellas.</p>
-
                             <h2 class="terminos">14. Política de Cookies</h2>
                             <p class="terminos">Este sitio utiliza cookies para mejorar la experiencia del usuario. Las
                                 cookies son pequeños archivos de texto que se almacenan en tu dispositivo al visitar un
                                 sitio web. Puedes optar por no aceptar cookies, pero esto puede afectar tu capacidad
                                 para utilizar el sitio de manera efectiva.</p>
-
                             <h2 class="terminos">15. Fuerza Mayor</h2>
                             <p class="terminos">No seremos responsables de ninguna falla o retraso en el cumplimiento de
                                 nuestras obligaciones en virtud de estos términos si dicha falla o retraso se debe a
                                 causas ajenas a nuestro control razonable, incluyendo, pero no limitándose a, actos de
                                 Dios, guerras, embargos, disturbios o desastres naturales.</p>
-
                             <h2 class="terminos">16. Disposiciones Generales</h2>
                             <p class="terminos">Si alguna disposición de estos términos se considera inválida o
                                 inaplicable, las demás disposiciones seguirán siendo válidas y aplicables. Estos
                                 términos constituyen el acuerdo completo entre el usuario y la empresa con respecto al
                                 uso del sitio.</p>
-
                             <h2 class="terminos">17. Modificaciones</h2>
                             <p class="terminos">La empresa se reserva el derecho de modificar estos términos en
                                 cualquier momento. Cualquier modificación será efectiva inmediatamente después de su
                                 publicación en el sitio. El uso continuado del sitio tras la publicación de cambios en
                                 los términos implica la aceptación de dichos cambios.</p>
-
                             <h2 class="terminos">18. Derechos Reservados</h2>
                             <p class="terminos">Todos los derechos no expresamente otorgados en estos términos son
                                 reservados por la empresa. Cualquier uso no autorizado del sitio o de su contenido puede
                                 ser objeto de acción legal.</p>
-
                             <p class="terminos">Estos términos y condiciones fueron actualizados por última vez el
                                 28/09/2024. Te agradecemos tu comprensión y cooperación.</p>
-
                         </div>
                     </div>
 
@@ -458,119 +345,81 @@
                             <h1 class="terminos">Política de Privacidad</h1>
                             <p class="terminos">Esta política de privacidad describe cómo recogemos, usamos y
                                 compartimos tu información personal.</p>
-
                             <h2 class="terminos">1. Información que Recogemos</h2>
                             <p class="terminos">Recogemos información que tú nos proporcionas al registrarte, como tu
                                 nombre, correo electrónico, y otra información relevante.</p>
-
                             <h2 class="terminos">2. Uso de la Información</h2>
                             <p class="terminos">Usamos tu información para ofrecerte nuestros servicios, comunicarnos
                                 contigo, y mejorar nuestra plataforma.</p>
-
                             <h2 class="terminos">3. Compartir Información</h2>
                             <p class="terminos">No vendemos ni compartimos tu información personal con terceros sin tu
                                 consentimiento, salvo por requisitos legales.</p>
-
                             <h2 class="terminos">4. Seguridad</h2>
                             <p class="terminos">Tomamos medidas razonables para proteger tu información personal. Sin
                                 embargo, no podemos garantizar la seguridad absoluta.</p>
-
                             <h2 class="terminos">5. Cambios a esta Política</h2>
                             <p class="terminos">Nos reservamos el derecho de modificar esta política de privacidad en
                                 cualquier momento. Te notificaremos sobre cambios significativos.</p>
-
                             <h2 class="terminos">6. Contacto</h2>
                             <p class="terminos">Si tienes preguntas sobre esta política, contáctanos a través de nuestro
                                 formulario de contacto.</p>
-
                             <h2 class="terminos">7. Cookies</h2>
                             <p class="terminos">Este sitio utiliza cookies para mejorar tu experiencia. Puedes gestionar
                                 tus preferencias de cookies en la configuración de tu navegador.</p>
-
                             <h2 class="terminos">8. Derecho a Acceder y Rectificar</h2>
                             <p class="terminos">Tienes derecho a acceder, corregir o eliminar tu información personal en
                                 cualquier momento. Para hacerlo, contáctanos.</p>
-
                             <h2 class="terminos">9. Retención de Datos</h2>
                             <p class="terminos">Retenemos tu información personal solo durante el tiempo necesario para
                                 cumplir con los propósitos para los que fue recogida.</p>
-
                             <h2 class="terminos">10. Transferencias Internacionales</h2>
                             <p class="terminos">Si transferimos tu información personal a otros países, aseguraremos que
                                 se apliquen medidas adecuadas de protección de datos.</p>
-
                             <h2 class="terminos">11. Menores de Edad</h2>
                             <p class="terminos">No recogemos intencionadamente información de menores de 13 años. Si
                                 descubrimos que hemos recogido dicha información, la eliminaremos.</p>
-
                             <h2 class="terminos">12. Quejas</h2>
                             <p class="terminos">Si tienes alguna queja sobre nuestra política de privacidad o cómo
                                 manejamos tu información, puedes contactar con las autoridades competentes.</p>
-
                             <h2 class="terminos">13. Consentimiento</h2>
                             <p class="terminos">Al utilizar nuestro sitio, das tu consentimiento para la recopilación y
                                 uso de tu información como se describe en esta política.</p>
-
                             <h2 class="terminos">14. Enlaces a Terceros</h2>
                             <p class="terminos">Nuestro sitio puede contener enlaces a otros sitios. No somos
                                 responsables de las prácticas de privacidad de estos sitios.</p>
-
                             <h2 class="terminos">15. Modificaciones a los Términos</h2>
                             <p class="terminos">Cualquier modificación a esta política se publicará en esta página. Te
                                 recomendamos revisarla regularmente.</p>
-
                         </div>
                     </div>
-
-
-
-
-
 
                     <h5>- RELLENE LOS DATOS REQUERIDOS PARA CONTINUAR</h5>
                     <button class="btn-detalles" id="btn-detalles" type="button" onclick="openPopup('yape-popup')"
                         disabled>Finalizar Compra</button>
-
                 </form>
             </div>
 
             <!-- Resumen de la Compra -->
-
             <div class="order-summary">
                 <h2>Resumen de la compra</h2>
-
                 <!-- Aquí se generarán los items del carrito -->
                 <div id="summaryItems"></div>
-
-
                 <div class="totales">
                     <!-- Sección de totales y costo de envío -->
                     <p id="summaryTotal2">S/ 0.00</p>
                     <p id="costoImpuesto">IGV (5%): S/ 0.00</p>
                     <p id="costoEnvio">Costo de envío: S/ 0.00</p>
-
                     <div id="progress-container">
                         <div id="progress-bar"></div>
                     </div>
                     <p id="free-shipping-message" style="display: none;">ENVÍO GRATIS DISPONIBLE</p>
                     <p id="summaryTotalGeneral">Total S/ 0.00</p>
                 </div>
-
-
             </div>
         </div>
-        </div>
-
-
-
-        </div>
-
-
     </main>
 
-
     <!-- Footer -->
-
     <footer class="footer">
         <div class="footer-top">
             <div class="footer-container">
@@ -609,19 +458,13 @@
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p>&copy; 2024 Editorial Grethel. Todos los derechos reservados.</p>
-
             </div>
         </div>
-
     </footer>
-
-
-
 
     <script src="JS - Usuario.js"></script>
 
     <!-- DESCUENTO -->
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             let discount = 0; // Variable para almacenar el descuento temporal
@@ -752,9 +595,7 @@
         });
     </script>
 
-
     <script>
-
         document.addEventListener('DOMContentLoaded', function () {
             fetch('data.json')
                 .then(response => response.json())
@@ -837,8 +678,6 @@
         });
     </script>
 
-
-
     <!-- Code injected by live-server -->
     <script>
         // <![CDATA[  <-- For SVG support
@@ -877,7 +716,6 @@
         }
         // ]]>
     </script>
-
 
     <script>
         function formatDate(date) {
@@ -920,10 +758,6 @@
         updateDeliveryDates3();
     </script>
 
-
-
-
-
     <script>
 
         function validateForm() {
@@ -937,14 +771,7 @@
                 errorMessage.textContent = "";
             }
         }
-
-
-
     </script>
-
-
-
-
 
     <script>
         // Obtener el DNI guardado del localStorage
@@ -973,9 +800,6 @@
             document.getElementById("userPhone").textContent = "";
         }
 
-
-
-
         /* ------------------------CERRAR SESIÓN------------------------ */
 
         document.getElementById("logoutButton").addEventListener("click", function () {
@@ -995,10 +819,7 @@
         });
     </script>
 
-
-
     <!-- TERMINOS Y CONDICIONES -->
-
 
     <script>
         // Obtener los elementos del modal y los botones
@@ -1039,15 +860,12 @@
                 privacyModal.style.display = "none";
             }
         };
-
     </script>
-
 
     <script>
         // Verificar si el usuario está logueado antes de acceder a checkout.html
         window.onload = function () {
             const loggedInDNI = localStorage.getItem("loggedInDNI");
-
             if (!loggedInDNI) {
                 // Si no está logueado, mostrar un SweetAlert2
                 Swal.fire({
@@ -1068,7 +886,5 @@
     <script src="JS - Principal.js"></script>
     <script src="JS - Usuario.js"></script>
 
-
 </body>
-
 </html>
