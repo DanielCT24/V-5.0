@@ -38,7 +38,6 @@ document.getElementById("logoutButton").addEventListener("click", function () {
         localStorage.removeItem("loggedInDNI");
 
         // Mostrar alerta de cierre de sesión con SweetAlert2
-        // Mostrar alerta de cierre de sesión con SweetAlert2
         Swal.fire({
             title: 'Has cerrado sesión',
             text: '¡Gracias por visitar nuestro sitio!',
@@ -53,9 +52,14 @@ document.getElementById("logoutButton").addEventListener("click", function () {
                 text: 'swal2-text-custom',
                 confirmButton: 'swal2-confirm-custom'
             }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirigir inmediatamente después de la confirmación
+                window.location.href = "/";
+            }
         });
 
-        // Redirigir a la página de inicio tras cerrar sesión
+        // Redirigir automáticamente a la página principal después de 7 segundos
         setTimeout(() => {
             window.location.href = "/"; // Cambia a la ruta de tu página de inicio
         }, 7000); // Redirige después de 7 segundos (ajusta según sea necesario)
@@ -64,3 +68,4 @@ document.getElementById("logoutButton").addEventListener("click", function () {
         window.location.href = "/";
     }
 });
+
