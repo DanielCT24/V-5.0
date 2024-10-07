@@ -15,10 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
+// Función para abrir y cerrar la ventana de chat
+function toggleChat() {
+    var chatPopup = document.getElementById('whatsappPopup');
+    if (chatPopup.style.display === "none" || chatPopup.style.display === "") {
+        chatPopup.style.display = "block";
+    } else {
+        chatPopup.style.display = "none";
+    }
+}
 
 
 
@@ -81,11 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fadeElements.forEach(element => observer.observe(element));
 });
-
-
-
-
-
 
 
 
@@ -289,10 +289,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCart(); // Inicializar el carrito al cargar la página
 });
 
-
-
-
-
 // Cerrar el carrito con animación
 function closeCart() {
     const sidebar = document.querySelector('.sidebar');
@@ -347,17 +343,6 @@ function addToCart(product, button) {
 
     updateCart();
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* ----------------------------------------TRANSICIÓN------------------------------------------------------------ */
 
